@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070d">
+  <title>ORION — Elise Smith</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="toast"></div>
+
+  <!-- APP -->
+  <div class="app">
+
+    <!-- SIDEBAR DESKTOP -->
+    <aside class="sidebar">
+      <div class="logo">ORION<span>✦</span></div>
+
+      <nav>
+        <button class="nav-btn active" data-page="home">
+          <span>⌂</span> Início
+        </button>
+
+        <button class="nav-btn" data-page="explore">
+          <span>⌕</span> Explorar
+        </button>
+
+        <button class="nav-btn create-trigger">
+          <span>＋</span> Criar
+        </button>
+
+        <button class="nav-btn" data-page="activity">
+          <span>♡</span> Atividade
+        </button>
+
+        <button class="nav-btn" data-page="profile">
+          <span>◉</span> Perfil
+        </button>
+      </nav>
+
+      <div class="sidebar-user">
+        <img id="sidebarAvatar" src="" alt="Avatar">
+        <div>
+          <strong>@elisesmith</strong>
+          <small>Conta fictícia</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="main">
+
+      <!-- HEADER MOBILE -->
+      <header class="mobile-header">
+        <div class="logo">ORION<span>✦</span></div>
+        <button class="header-create create-trigger">＋</button>
+      </header>
+
+      <!-- ================= HOME ================= -->
+      <section class="page active" id="page-home">
+
+        <div class="stories-container">
+          <div class="stories-header">
+            <h2>Stories</h2>
+            <button id="storyAutoPlay">▶ Reproduzir</button>
+          </div>
+
+          <div class="stories" id="stories"></div>
+        </div>
+
+        <div class="feed" id="feed"></div>
+
+      </section>
+
+      <!-- ================= EXPLORE ================= -->
+      <section class="page" id="page-explore">
+
+        <div class="page-title">
+          <h1>Explorar</h1>
+          <p>Descubra conteúdos fictícios do universo ORION.</p>
+        </div>
+
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="exploreSearch" type="text" placeholder="Pesquisar pessoas, hashtags...">
+        </div>
+
+        <div class="categories">
+          <button class="category active" data-category="all">Tudo</button>
+          <button class="category" data-category="travel">Viagens</button>
+          <button class="category" data-category="fashion">Fashion</button>
+          <button class="category" data-category="lifestyle">Lifestyle</button>
+          <button class="category" data-category="nature">Natureza</button>
+        </div>
+
+        <div class="explore-grid" id="exploreGrid"></div>
+
+      </section>
+
+      <!-- ================= ATIVIDADE ================= -->
+      <section class="page" id="page-activity">
+
+        <div class="page-title">
+          <h1>Atividade</h1>
+          <p>Interações recentes da sua conta fictícia.</p>
+        </div>
+
+        <div class="notifications" id="notifications"></div>
+
+      </section>
+
+      <!-- ================= PERFIL ================= -->
+      <section class="page" id="page-profile">
+
+        <div class="profile-header">
+
+          <div class="profile-photo-wrapper">
+            <img id="profileAvatar" src="" alt="Elise">
+          </div>
+
+          <div class="profile-info">
+
+            <div class="profile-name">
+              <h1>Elise Smith</h1>
+              <span class="verified">✓</span>
+            </div>
+
+            <p class="username">@elisesmith</p>
+
+            <div class="profile-stats">
+              <div>
+                <strong id="profilePosts">10</strong>
+                <span>publicações</span>
+              </div>
+
+              <div>
+                <strong>30 M</strong>
+                <span>seguidores</span>
+              </div>
+
+              <div>
+                <strong>1.248</strong>
+                <span>seguindo</span>
+              </div>
+            </div>
+
+            <p class="bio">
+              Influencer, modelo e criadora de conteúdo.
+            </p>
+
+            <div class="profile-actions">
+            		<button id="editProfileBtn">Editar perfil</button>
+              <button id="followBtn">Seguir</button>
+              <button id="messageBtn">Mensagem</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="highlights">
+          <div class="highlight">
+            <div>✈️</div>
+            <span>Viagens</span>
+          </div>
+
+          <div class="highlight">
+            <div>✨</div>
+            <span>Looks</span>
+          </div>
+
+          <div class="highlight">
+            <div>🌙</div>
+            <span>Noite</span>
+          </div>
+
+          <div class="highlight">
+            <div>☕</div>
+            <span>Daily</span>
+          </div>
+
+          <div class="highlight">
+            <div>🌊</div>
+            <span>Summer</span>
+          </div>
+        </div>
+
+        <div class="profile-tabs">
+          <button class="profile-tab active" data-tab="posts">▦</button>
+          <button class="profile-tab" data-tab="saved">♡</button>
+        </div>
+
+        <div class="profile-grid" id="profileGrid"></div>
+
+      </section>
+<!-- ================= PERFIL DA LENA ================= -->
+
+<section class="page" id="page-lena">
+
+  <div class="profile-header">
+
+    <div class="profile-photo-wrapper">
+      <img
+        id="lenaProfileAvatar"
+        src=""
+        alt="Lena"
+      >
+    </div>
+
+    <div class="profile-info">
+
+      <div class="profile-name">
+        <h1>Lena</h1>
+        <span class="verified">✓</span>
+      </div>
+
+      <p class="username">@lena</p>
+
+      <div class="profile-stats">
+
+        <div>
+          <strong id="lenaPostCount">0</strong>
+          <span>publicações</span>
+        </div>
+
+        <div>
+          <strong>845 mil</strong>
+          <span>seguidores</span>
+        </div>
+
+        <div>
+          <strong>412</strong>
+          <span>seguindo</span>
+        </div>
+
+      </div>
+
+      <p class="bio">
+        Lifestyle, viagens e momentos especiais. ✨
+      </p>
+
+      <div class="profile-actions">
+
+        <button id="followLenaBtn">
+          Seguir
+        </button>
+
+        <button id="messageLenaBtn">
+          Mensagem
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="highlights">
+
+    <div class="highlight">
+      <div>✈️</div>
+      <span>Viagens</span>
+    </div>
+
+    <div class="highlight">
+      <div>☀️</div>
+      <span>Verão</span>
+    </div>
+
+    <div class="highlight">
+      <div>✨</div>
+      <span>Lifestyle</span>
+    </div>
+
+    <div class="highlight">
+      <div>🌊</div>
+      <span>Praia</span>
+    </div>
+
+  </div>
+
+  <div class="profile-tabs">
+
+    <button class="profile-tab active">
+      ▦
+    </button>
+
+  </div>
+
+  <div
+    class="profile-grid"
+    id="lenaPostsGrid"
+  ></div>
+
+</section>
+    </main>
+
+  </div>
+
+  <!-- NAV MOBILE -->
+  <nav class="bottom-nav">
+
+    <button class="nav-btn active" data-page="home">
+      <span>⌂</span>
+      <small>Início</small>
+    </button>
+
+    <button class="nav-btn" data-page="explore">
+      <span>⌕</span>
+      <small>Explorar</small>
+    </button>
+
+    <button class="nav-btn create-trigger">
+      <span class="create-icon">＋</span>
+      <small>Criar</small>
+    </button>
+
+    <button class="nav-btn" data-page="activity">
+      <span>♡</span>
+      <small>Atividade</small>
+    </button>
+
+    <button class="nav-btn" data-page="profile">
+      <span>◉</span>
+      <small>Perfil</small>
+    </button>
+
+  </nav>
+
+
+  <!-- ================= MODAL PUBLICAÇÃO ================= -->
+
+  <div class="modal-overlay" id="createModal">
+
+    <div class="modal create-modal">
+
+      <div class="modal-header">
+        <h2>Criar publicação</h2>
+        <button class="close-modal" data-close="createModal">×</button>
+      </div>
+
+      <div class="upload-area" id="uploadArea">
+
+        <div id="uploadPlaceholder">
+          <div class="upload-icon">＋</div>
+          <h3>Escolha uma imagem</h3>
+          <p>PNG, JPG ou WEBP</p>
+
+          <label class="upload-button">
+            Escolher imagem
+            <input type="file" id="imageInput" accept="image/*" hidden>
+          </label>
+        </div>
+
+        <div id="imagePreviewContainer" class="hidden">
+          <img id="imagePreview" src="" alt="Prévia">
+          <button id="removeImage" class="remove-image">× Remover imagem</button>
+        </div>
+
+      </div>
+
+      <textarea
+        id="captionInput"
+        maxlength="1000"
+        placeholder="Escreva uma legenda..."
+      ></textarea>
+
+      <input
+        id="hashtagsInput"
+        type="text"
+        placeholder="#viagem #lifestyle #elisesmith"
+      >
+
+      <button id="publishBtn" class="publish-button">
+        Publicar
+      </button>
+
+      <button class="cancel-button" data-close="createModal">
+        Cancelar
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- ================= MODAL COMENTÁRIOS ================= -->
+
+  <div class="modal-overlay" id="commentsModal">
+
+    <div class="modal comments-modal">
+
+      <div class="modal-header">
+        <h2>Comentários</h2>
+        <button class="close-modal" data-close="commentsModal">×</button>
+      </div>
+
+      <div class="comments-list" id="commentsList"></div>
+
+      <div class="comment-input-area">
+
+        <img id="commentAvatar" src="" alt="Você">
+
+        <input
+          id="commentInput"
+          type="text"
+          maxlength="300"
+          placeholder="Adicione um comentário..."
+        >
+
+        <button id="sendComment">Enviar</button>
+
+      </div>
+
+      <button id="generateCommentsBtn" class="generate-comments">
+        ✨ Gerar mais comentários
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- ================= MODAL STORY ================= -->
+
+  <div class="story-viewer hidden" id="storyViewer">
+
+    <div class="story-progress">
+      <div id="storyProgressBar"></div>
+    </div>
+
+    <button class="story-close" id="storyClose">×</button>
+
+    <button class="story-arrow left" id="storyPrevious">‹</button>
+
+    <div class="story-content">
+
+      <div class="story-user">
+        <img id="viewerStoryAvatar" src="" alt="">
+        <strong id="viewerStoryName"></strong>
+      </div>
+
+      <img id="viewerStoryImage" class="viewer-story-image" src="" alt="Story">
+
+      <div class="viewer-story-caption" id="viewerStoryCaption"></div>
+
+    </div>
+
+    <button class="story-arrow right" id="storyNext">›</button>
+
+  </div>
+
+
+  <!-- ================= MODAL POST ================= -->
+
+  <div class="modal-overlay" id="postModal">
+
+    <div class="modal post-modal">
+
+      <button class="close-modal post-close" data-close="postModal">×</button>
+
+      <img id="postModalImage" src="" alt="Publicação">
+
+      <div class="post-modal-info">
+
+        <div class="post-user">
+          <img id="postModalAvatar" src="" alt="">
+          <strong>Elise Smith</strong>
+          <span class="verified">✓</span>
+        </div>
+
+        <p id="postModalCaption"></p>
+
+      </div>
+
+    </div>
+
+  </div>
+		
+		<!-- MODAL EDITAR PERFIL -->
+<div class="modal-overlay" id="editProfileModal">
+    <div class="modal edit-profile-modal">
+
+        <div class="modal-header">
+            <h2>Editar perfil</h2>
+            <button class="close-modal" id="closeEditProfile">×</button>
+        </div>
+
+        <div class="edit-profile-photo">
+            <img id="editProfileAvatar" src="" alt="Foto de perfil">
+
+            <label class="change-photo-button">
+                Alterar foto
+                <input type="file" id="profileImageInput" accept="image/*" hidden>
+            </label>
+        </div>
+
+        <label>Nome</label>
+        <input id="editProfileName" type="text" maxlength="40">
+
+        <label>Nome de usuário</label>
+        <input id="editProfileUsername" type="text" maxlength="30">
+
+        <label>Biografia</label>
+        <textarea id="editProfileBio" maxlength="150"></textarea>
+
+        <label>Link</label>
+        <input id="editProfileLink" type="text" maxlength="100">
+
+        <button id="saveProfileBtn" class="publish-button">
+            Salvar alterações
+        </button>
+
+    </div>
+</div>
+
+
+  <script src="java.js"></script>
+</body>
+</html>
